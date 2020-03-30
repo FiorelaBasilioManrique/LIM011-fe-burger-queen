@@ -1,0 +1,30 @@
+<section>
+    <form [formGroup]="OrderForm" (ngSubmit)="sendOrder(OrderForm.value, result, todaydate)" method="post">
+        <label>Nombre de cliente:</label>
+        <input type="text" formControlName = "customerName" class="form-control">
+        <label>Mesa #:</label>
+        <input type="number" formControlName = "table" class="form-control">
+        <label>Para Delivery:</label>
+        <input type="checkbox" formControlName = "delivery" class="form-control" >
+        
+        <p>{{customerName}}</p>
+        <p>{{todaydate}}</p>
+    <ul class="title-list">
+        <li>Producto</li>
+        <li>Precio</li>
+        <li>Cantidad</li>
+        <li>Subtotal</li>
+    </ul>
+
+    <ul class = "customer-order-list">
+        <li class = "customer-order-list-item" *ngFor = "let item of result">
+            <span>{{item.product}} {{item.subtotal}}s/ </span>
+            <span> Cantidad: {{item.quantity}}</span>
+            <button (click)="reduceProduct(item)"> - </button> <button (click)="deleteProduct(item)"> X </button>
+        </li>
+        <div class= "total"> <p>Total:{{getTotal(result)}} </p></div>
+    </ul>
+        <button class="send-order-to">Enviar a Cocina</button>    
+    </form>
+</section>
+

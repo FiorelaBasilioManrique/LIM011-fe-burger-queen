@@ -1,0 +1,46 @@
+.app-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 4em 2fr 2fr;
+    grid-template-rows: 3em auto;
+    grid-template-areas: 
+    "header header header header"
+    "aside div div ";
+    justify-items: stretch;
+}
+.header{
+    width: 100vw;
+    height: 100%;
+    display: grid;
+}
+.menu-links-btn {
+    width: 100%;
+    height: 100vh;
+}
+.menu-nav-links{
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.menu-items{
+    width: 100%;
+    height: 100%;
+    padding: .5em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.customer-order{
+    width: 100%;
+    height: 100%;
+    padding: .5em;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}

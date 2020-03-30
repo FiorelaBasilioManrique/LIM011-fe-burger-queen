@@ -1,0 +1,20 @@
+.customer-order-list{
+    list-style-type: none;
+    width: 90%;
+    height: 90%;
+}
+
+.customer-order-list-item button {
+    border: none;
+    background-color: gray;
+    margin: 0.5em;
+    padding: 0.5em 1em ;
+    border-radius: 1em;
+}
+.title-list {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+    list-style: none;
+}

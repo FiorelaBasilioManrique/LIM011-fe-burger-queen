@@ -1,0 +1,11 @@
+<section>
+  <h2>{{ menuNameToShow.toUpperCase() }}</h2>
+  <ul class="menu-item-list">
+    <li class="menu-item-list-item" *ngFor="let item of menuItems">
+      <button class="item-btn" (click)="getCustomerRequest(item)">
+        <img [src]="item.image" />
+        <p>{{ item.product }} {{ item.price }}s/</p>
+      </button>
+    </li>
+  </ul>
+</section>
