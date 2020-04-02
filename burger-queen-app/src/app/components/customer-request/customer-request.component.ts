@@ -35,7 +35,7 @@ export class CustomerRequestComponent implements OnInit {
 	getTotal(result: any[]) {
 		return result.reduce(
 			(iterator: number, element: { subtotal: number }) => {
-				return iterator + element.subtotal;
+        return iterator + element.subtotal:
 			},
 			0
 		);
@@ -87,14 +87,18 @@ export class CustomerRequestComponent implements OnInit {
 			order: result
 		};
 		this.dataBase.sendOrderToKitchen(finalOrder);
-		console.log('sent to kitchen');
+    console.log('sent to kitchen');
+    console.log('heheheh');
+
 		this.menuNameService.resetOrder();
 		this.OrderForm.reset();
 	}
 	cancelOrder() {
 		this.menuNameService.resetOrder();
 		this.OrderForm.reset();
-		console.log('Cancelled Order');
+    console.log('pruebaaaaa');
+    console.log('pruebaaa2222');
+
 	}
 
 	ngOnInit() {
