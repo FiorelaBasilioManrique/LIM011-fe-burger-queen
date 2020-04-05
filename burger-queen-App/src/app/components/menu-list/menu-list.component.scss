@@ -1,6 +1,7 @@
 .menu-list-wrapper{
     padding: 2em .5em 0 1.5em;
-    text-align: left;
+    background-color: #242527;
+    text-align: center;
     // align-content: center;
     -webkit-box-shadow: inset -13px 12px 36px -14px rgba(156,156,156,1);
     -moz-box-shadow: inset -13px 12px 36px -14px rgba(156,156,156,1);
@@ -12,6 +13,7 @@
     display:flex;
     padding: none;
     // flex-wrap: wrap;
+    background-color: black;
     flex-direction: column;
     list-style-type: none;
     justify-content: center;
@@ -37,6 +39,7 @@
   flex-direction: row;
   align-content: center;
   text-align: center;
+  margin: 6px;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.5em;
 }
@@ -49,6 +52,7 @@
 .menu-list-item .item-btn{
   border-radius: 50px;
   border-style: none;
+  background-color: bisque;
 }
 // .menu-title{
 //   color: black;

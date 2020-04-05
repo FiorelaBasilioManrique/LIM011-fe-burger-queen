@@ -1,4 +1,17 @@
-.menu-button {
+.nav-menu-links{
+  height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: -webkit-box;
+}
+.nav-menu-links .menu-button {
+  color: rgb(231, 210, 22);
+  background-color: #242527;;
+  font-weight: bolder;
+  font-size: xx-large;
+  padding: 1em;
+  height: 148px
+}
+/* .menu-button {
   padding: 1em;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
@@ -10,5 +23,5 @@
   width: 100%;
   border-style: none;
   // background-color: #b3aa99;
+} */
 
-}

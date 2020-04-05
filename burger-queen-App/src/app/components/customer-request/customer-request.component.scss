@@ -5,11 +5,18 @@
 
 }
 .form-container{
-  border-color: rgb(49, 4, 49);
-  border-width: 2.5px;
-  background-color: rgb(162, 219, 221);
+  margin-top: 60px;
+  color: aliceblue;
+  background-color: black;
 }
-
+.total {
+  background-color: gold;
+  width: 70px;
+  color: black;
+}
+.table-order{
+  display: flex;
+}
 .customer-order-list-item button {
   border: none;
   background-color: gray;
@@ -21,12 +28,15 @@
   display: flex;
   flex-direction: row;
   justify-items: center;
+  margin-top: 10px;
   justify-content: space-around;
   list-style: none;
+  background-color: gold;
+  color: black;
 }
 // .form-container {
-//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
-// } 
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+// }
 
 
 /* input menu */
@@ -52,14 +62,17 @@
 .cliente-name{
   font-size: 21px;
 }
-
+.date{
+  text-align: center;
+  margin-top: 10px;
+}
 /* Delivery checkbox */
   // .form-order-inputs{
   //     display: inline;
   //     margin: 10em;
   // }
 .form-order-inputs label {
-  display: inline-block;
+  //display: inline-block;
   background-color: lightgray;
   border: 2px solid darkgray;
   color: #adadad;
@@ -113,9 +126,6 @@
 .form-order-inputs input[type="checkbox"]:focus + label{
  border: 2px solid gray;
 }
-
-
-
 /* .listoo {
   display: table-row-group;
   width: 30px;
