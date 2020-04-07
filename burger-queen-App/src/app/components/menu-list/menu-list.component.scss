@@ -3,7 +3,7 @@
     //text-align: left;
     // align-content: center;
     // background-color: #242527;
-    background-color: black;
+    background-color: #b3aa99;
     text-align: center;
     -webkit-box-shadow: inset -13px 12px 36px -14px rgba(156,156,156,1);
     -moz-box-shadow: inset -13px 12px 36px -14px rgba(156,156,156,1);
@@ -14,6 +14,11 @@
     justify-content: center;
     margin: 17px;
     margin-top: 0;
+}
+.menu-list-wrapper .menu-title{
+    color: black;
+    font-size: 2em;
+    margin-bottom: 0.5em;
 }
 .menu-list {
     width:100%;

@@ -1,40 +1,52 @@
-<section>
+<section class="customer-order-wrapper">
+  <h2 class="menu-title">ORDEN</h2>
   <form class="form-container" [formGroup]="OrderForm" (ngSubmit)="sendOrder(OrderForm.value, result, todaydate)"
     method="post">
-    <div class="container-div">
-      <label class="cliente-name">Nombre de cliente:</label>
-      <input type="text" formControlName="customerName" class="form-control" placeholder="Nombre" />
-      <div class="table-order">
-        <label>Mesa #:</label> <label>Mesa #:</label>
-        <input type="number" formControlName="table" class="form-control" />
+    <div class="input-container">
+      <div class="form-order-inputs-1">
+        <label class="cliente-name">Nombre de cliente:</label>
+        <p><input type="text" formControlName="customerName" class="form-control" placeholder="Nombre" /></p>
       </div>
-      <div class="form-order-inputs">
+      <div class="form-order-inputs-2">
+        <label>Mesa #:</label>
+        <p><input type="number" formControlName="table" class="form-control" placeholder="00" /></p>
+      </div>
+      <div class="form-order-inputs form-order-inputs-3">
+        <!-- <span> Para Delivery:</span> -->
         <input type="checkbox" formControlName="delivery" id="checkbox-delivery" class="form-control" />
         <label for="checkbox-delivery">Delivery</label>
       </div>
     </div>
-    <p>{{ customerName }}</p>
-    <p class="date">{{ todaydate }}</p>
-    <ul class="title-list">
-      <li>Producto</li>
-      <li>Precio</li>
-      <li>Cantidad</li>
-      <li>Subtotal</li>
-    </ul>
-    <ul class="customer-order-list">
-      <li class="customer-order-list-item" *ngFor="let item of result">
-        <span>{{ item.product }} {{ item.subtotal }}s/ </span>
-        <span> Cantidad: {{ item.quantity }}</span>
-        <button (click)="reduceProduct(item)"><img src="../src/remove.png"></button>
-        <button (click)="deleteProduct(item)"><img src="../src/img/close.png"></button>
-      </li>
-      <div class="total">
-        <p>Total:{{ getTotal(result) }}</p>
-      </div>
-    </ul>
-    <button type="button" class="form-btn-cancel-order" (click)="cancelOrder()">
-      Cancelar Orden
-    </button>
-    <button class="send-order-to">Enviar a Cocina</button>
+
+    <!-- <p>{{ customerName }}</p> -->
+    <!-- <p class="date">{{ todaydate }}</p> -->
+    <div class="list-container">
+      <ul class="title-list">
+        <li>Producto</li>
+        <li>Cantidad</li>
+        <li>Precio</li>
+        <li>Reducir</li>
+        <li>Borrar</li>
+      </ul>
+
+      <ul class="customer-order-list">
+        <li class="customer-order-list-item" *ngFor="let item of result">
+          <span>{{ item.product }}</span>
+          <span> {{ item.quantity }}</span>
+          <span>S/. {{ item.subtotal }}</span>
+          <button (click)="reduceProduct(item)"><img src="../src/remove.png"></button>
+          <button (click)="deleteProduct(item)"><img src="../src/img/close.png"></button>
+        </li>
+      </ul>
+    </div>
+    <div class="total">
+      <p>Total: S/. {{ getTotal(result) }}</p>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="form-btn cancel-order" (click)="cancelOrder()">
+        Cancelar Orden
+      </button>
+      <button class="form-btn send-order-to">Enviar a Cocina</button>
+    </div>
   </form>
 </section>
