@@ -11,9 +11,6 @@ export class MenuNameService {
   currentString = this.menuNameSource.asObservable();
   currentProduct = this.arrOrder.asObservable();
 
-  // private arrOrdertoReduceProduct = new BehaviorSubject([]);
-  // currentProductsToreduceFrom = this.arrOrder.asObservable();
-
   changeString(value: string) {
     this.menuNameSource.next(value);
   }
