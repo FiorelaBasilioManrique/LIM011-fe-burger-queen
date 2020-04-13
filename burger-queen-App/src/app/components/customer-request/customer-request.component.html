@@ -34,10 +34,8 @@
           <span>{{ item.product }}</span>
           <span> {{ item.quantity }}</span>
           <span>S/. {{ item.subtotal }}</span>
-          <button (click)="reduceProduct(item)"><img
-              src="C:\Users\QA0005\Desktop\LAB\LIM011-fe-burger-queen\burger-queen-App\src\img\remove.png"></button>
-          <button (click)="deleteProduct(item)"><img
-              src="C:\Users\QA0005\Desktop\LAB\LIM011-fe-burger-queen\burger-queen-App\src\img\close.png"></button>
+          <button (click)="reduceProduct(item)"><i class="fas fa-minus-circle"></i></button>
+          <button (click)="deleteProduct(item)"><i class="fas fa-ban"></i></button>
         </li>
       </ul>
     </div>

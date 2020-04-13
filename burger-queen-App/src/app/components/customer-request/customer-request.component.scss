@@ -75,7 +75,13 @@
   flex-direction: column;
   // justify-content: space-between;
 }
-
+.fa{
+  //display: inline-block;
+  //font: normal normal normal 14px/1 FontAwesome;
+  background-color: none;
+  background-image: none;
+  font-size: inherit;
+}
 .customer-order-list .customer-order-list-item{
   // border: 2px solid green;
   display: flex;
